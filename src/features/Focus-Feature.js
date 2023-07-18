@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import {
   View,
-  Text,
-  SafeAreaView,
-  Platform,
-  StatusBar,
   StyleSheet,
-  Button,
-  Alert,
 } from 'react-native';
 import { TextInput } from 'react-native-paper';
 import { spacing, size } from '../utils/sizing';
@@ -48,6 +42,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'nowrap',
     justifyContent: 'space-between',
+    marginTop: spacing.lg,
   },
   input: {
     flex: 1,

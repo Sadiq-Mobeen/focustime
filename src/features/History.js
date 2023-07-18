@@ -8,7 +8,7 @@ export default History = ({ history }) => {
 
   if(!history || !history.length) return <Text style={styles.title}>You haven't focused on anything yet! </Text>
 
-  const renderItem = ({item}) => <Text style = {styles.item}> > { item } </Text>
+  const renderItem = ({item}) => <Text style = {styles.item}> - { item } </Text>
 
   // const item = ;
   return (
@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     color: colors.white,
   },
   title: {
-    flex: 'auto',
     marginLeft: spacing.sm,
     marginTop: spacing.md,
     color: colors.white,

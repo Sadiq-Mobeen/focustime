@@ -7,17 +7,20 @@ import {
   Platform,
   StatusBar,
 } from 'react-native';
+
 import Constants from 'expo-constants';
 
-import History from './src/features/History';
-
 import colors from './src/utils/colors';
+
 import Focus from './src/features/Focus-Feature';
 import Timer from './src/features/Timer';
+import History from './src/features/History';
 
 export default function App() {
+
   const [currentSubject, setCurrentSubject] = useState('');
   const [history, setHistory] = useState([]);
+
   return (
     <SafeAreaView style={styles.container}>
       {!currentSubject ? (
@@ -43,6 +46,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
     backgroundColor: colors.secondryColor,
   },
 });
